@@ -8,7 +8,7 @@ import { Storage } from "megajs";
  */
 export async function uploadToMega(filename, buffer) {
   try {
-    // Validate inputs
+    
     if (!Buffer.isBuffer(buffer)) {
       throw new Error("Invalid buffer: Expected a Node.js Buffer object.");
     }
@@ -48,7 +48,7 @@ export async function uploadToMega(filename, buffer) {
 
     return fileUrl;
   } catch (error) {
-    console.error("MEGA upload failed:", error);
+    console.error("MEGA uploading file failed:", error);
     throw error;
   }
 }
